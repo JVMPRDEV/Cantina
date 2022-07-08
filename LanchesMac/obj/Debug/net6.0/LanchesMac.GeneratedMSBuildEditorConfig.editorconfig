@@ -35,6 +35,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5DYXRlZ29yaWFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Areas/Admin/Views/AdminGrafico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Areas/Admin/Views/AdminGrafico/VendasMensal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc01lbnNhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Areas/Admin/Views/AdminGrafico/VendasSemanal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5HcmFmaWNvXFZlbmRhc1NlbWFuYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Areas/Admin/Views/AdminImagens/GetImagens.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5JbWFnZW5zXEdldEltYWdlbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -143,10 +155,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Home/_IndexPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfSW5kZXhQYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Lanche/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFuY2hlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -175,8 +183,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Shared/_Barra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXJyYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Shared/_BarraMenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CYXJyYU1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Shared/_Carousel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJvdXNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jvr3292_undadm/Desktop/personal dev/UdemyProjects/LanchesMac/LanchesMac/Views/Shared/_LanchesResumo.cshtml]
