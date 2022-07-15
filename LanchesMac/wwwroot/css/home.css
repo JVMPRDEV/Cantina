@@ -1,0 +1,47 @@
+:root {
+    --color-marrom: #333528;
+    --color-verde: #0db94b;
+    --color-nude: #f5f4f0;
+    --color-preto: black;
+    --color-branco: white;
+    --color-sombra: #888888;
+    --color-laranja: #dd4d0e;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.center {
+    justify-content: center;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.header-container {
+    width: 99vw;
+    display: flex;
+    margin: 0px;
+}
+
+#sobre p {
+    color: var(--color-branco);
+}

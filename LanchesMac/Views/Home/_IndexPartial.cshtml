@@ -1,0 +1,95 @@
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<style>
+    .vertical-menu {
+        width: 25vw;
+        height: 400px;
+        overflow-y: auto;
+        padding: 30px;
+    }
+
+        .vertical-menu-content {
+            background-color: white;
+            color: black;
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+
+            border-bottom: 1px solid var(--color-sombra);
+            height: 160px;
+        }
+
+            .vertical-menu-content:hover {
+                background-color: #ccc;
+            }
+
+            .vertical-menu-titulo {
+                border-bottom: 1px solid var(--color-sombra);
+                color: black;
+                font-family: Palatino, URW Palladio L, serif;
+                font-size: 32px;
+                height: 70px;
+            }
+</style>
+
+<div class="">
+    <div class="slide-container">
+
+        <div class="slide-image row">
+            <img class="mySlides" src="~/images/banner-home-1.jpg">
+            <img class="mySlides" src="~/images/banner-home-2.jpg">
+            <img class="mySlides" src="~/images/banner-home-3.jpg">
+        </div>
+
+        <div cclass="slide-content">
+            <div class="vertical-menu">
+                <div class="vertical-menu-titulo">Sabores do dia</div>
+                <div class="vertical-menu-content">X</div>
+                <div class="vertical-menu-content">X</div>
+                <div class="vertical-menu-content">X</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!--
+    <div class="row no-gutter">
+    @{
+        string[] imgs = {
+        "~/images/carousel11.jpg",
+        "~/images/carousel12.jpg",
+        "~/images/carousel13.jpg",
+        "~/images/carousel13.jpg",
+        "~/images/carousel14.jpg"
+        };
+    }
+
+    @foreach (var img in imgs)
+    {
+                                        <div class="col-xs-2 col-md-2">
+                                            <a class="portfolio-box" asp-action="List" asp-controller="Lanche">
+                                                <img src="@Url.Content(img)" alt="Lanches" width="450" height="220" />
+                                            </a>
+                                        </div>
+    }
+    </div>
+    -->

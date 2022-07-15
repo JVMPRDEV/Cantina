@@ -21,5 +21,27 @@
             </span>
             <h5>Av. Juscelino Kubichek 1000 - 03540-550 - São Paulo</h5>
         </p>
+        <p></p>
+
+        <div>
+            <input type="text" id="nome" placeholder="Nome Completo" />
+            <input type="text" id="telefone" placeholder="(XX) 00000-0000" />
+            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" />
+            <button onclick="EnviarEmail()">Click</button>
+        </div>
     </div>
 </div>
+
+<script>
+    $(function() {
+        $('#cpf').mask('000.000.000-00');
+    });
+
+    function EnviarEmail() {
+        var nome = document.getElementById("nome").value;
+        var telefone = document.getElementById("telefone").value;
+        var cpf  = $('#cpf').val();
+
+        window.location.href = "mailto:credito.3292@sicoob-ba.com.br?cc=ti%40credexecutivo.com.br&subject=Atualização Cadastral&body=Olá, tudo bem ? Segue abaixo meus dados cadastrais atualizados: %0D%0A %0D%0A Nome: " + nome + " %0D%0A Cpf: " + cpf + "%0D%0A Numero de telefone: " + telefone + "%0D%0A %0D%0A Por favor anexe seus comprovantes Comprovante nesse e-mail: %0D%0A Comprovante de residencia: %0D%0A Comprovante de renda: %0D%0A %0D%0A Atenciosamente, ";
+    }
+</script>

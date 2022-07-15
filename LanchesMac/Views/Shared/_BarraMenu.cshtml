@@ -1,36 +1,60 @@
-﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
-     <div class="container">
-       <a class="navbar-brand" asp-area="" asp-controller="Home"asp-action="Index">
-          <img src="~/images/logo_lanche2-sfd.png" asp-append-version="true" />
-          LanchesMac
-      </a>
-     <!-- Toggler/collapsibe Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
-     aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-      <!-- Collapsible content -->
-    <div class="navbar-collapse collapse" id="collapsibleNavbar" style="font-size: medium; font-weight: bold">
-           <ul class="navbar-nav mr-auto">
-               <li class="nav-item">@await Component.InvokeAsync("CategoriaMenu")</li>
-                <li class="nav-item">
-                  <form class="navbar-form navbar-right" asp-controller="Lanche" asp-action="Search" method="get">
-                    <div class="form-group">
-                       <input type="text" class="form-control" placeholder="Procurar produto" name="searchString" value="@ViewData["searchString"]">
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+</head>
+
+<header>
+    <div class="header-nav-1">
+        <div class="header-nav-2 row">
+            <section class="header-container  space-between">
+                <div class="item">
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/images/logo_cantina.png" asp-append-version="true" />
+                    </a>
+                </div>
+
+                <div class="item navbar navbar-expand-sm navbar-toggleable-sm column">
+                    <div class="center">
+                        <div>@await Html.PartialAsync("_LoginPartial")</div>
                     </div>
-                 </form>
-                </li>
-               <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a></li>
-               <li class="nav-item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-               <li class="nav-item">
-                 @if(User.IsInRole("Admin"))
-                 {
-                    <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
-                 }
-               </li>
-              <li class="nav-item">@await Html.PartialAsync("_LoginPartial")</li>
-              <li class="nav-item">@await Component.InvokeAsync("CarrinhoCompraResumo")</li>
-          </ul>
+
+                    <div>
+                        <!-- Toggler/collapsibe Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+                                aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <!-- Collapsible content -->
+                        <div class="navbar-collapse collapse flex-end" id="collapsibleNavbar">
+                            <div>
+                                <form class="navbar-form navbar-right" asp-controller="Lanche" asp-action="Search" method="get">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Procurar produto" name="searchString" value="@ViewData["searchString"]">
+                                    </div>
+                                </form>
+                            </div>
+                            <div style="margin-left:5px;">@await Component.InvokeAsync("CategoriaMenu")</div>
+                            <div style="margin-left:5px;">@await Component.InvokeAsync("CarrinhoCompraResumo")</div>
+             
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="header-nav-3 row">
+            <section class="header-container  space-between">
+                <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a></div>
+                <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a></div>
+                <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Sobre nós</a></div>
+                <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Meus Pedidos</a></div>
+                <div class="item">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="nav-link text-light" asp-area="Admin" asp-controller="Admin" asp-action="Index">Admin</a>
+                    }
+                </div>
+            </section>
+        </div>
     </div>
-  </div>
- </nav>
+</header>
