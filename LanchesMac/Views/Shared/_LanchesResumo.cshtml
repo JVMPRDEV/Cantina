@@ -19,13 +19,13 @@
                    asp-route-lancheId="@Model.LancheId"><b>@Model.Nome</b></a>
             </h3>
 
-            <h4 class="text-center"><b>Preço : </b>@Model.Preco.ToString("c")</h4>
+            <h4 class="text-center lanche-preco"><b>Preço : </b>@Model.Preco.ToString("c")</h4>
 
-            <p class="text-center">@Model.DescricaoCurta</p>
+            <p class="text-center lanche-descricao">@Model.DescricaoCurta</p>
         </div>
 
         <div>
-            <p class="button text-center">
+            <p class="button text-center lanche-botao">
                 <a class="btn btn-primary card-button card-button-hover " id="cartButton" asp-controller="CarrinhoCompra"
                    asp-action="AdicionarItemNoCarrinhoCompra" asp-route-LancheId="@Model.LancheId">
                     Incluir no Carrinho

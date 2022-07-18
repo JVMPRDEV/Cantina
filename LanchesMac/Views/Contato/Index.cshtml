@@ -1,34 +1,76 @@
-﻿<div class="container">
-    <img src="~/images/faleconosco1.jpg" alt="Fale conosco" />
-    <div class="jumbotron">
+﻿<style>
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
+    button{
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .contato-container {
+      border-radius: 5px;
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .box-contato{
+       font-family: Palatino, URW Palladio L, serif;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       margin-left:9vw;
+
+    }
+</style>
+
+<div class="container">
+
+    <div class="box-contato">
+        <br />
         <h3>Queremos ouvir o que você tem a dizer</h3>
+
         <p>
             Se você tiver alguma dúvida ou sugestão fale conosco
         </p>
-        <p>
-            <span>
-                <img src="~/images/Envelope-icon24.png" />
-            </span>
-            <h5><email endereco="macoratti@yahoo.com" conteudo="Enviar um e-mail"></email></h5>
-            <br />
-            <span>
-                <img src="~/images/phone-app-icon.png" />
-            </span>
-            <h5>(11) 9874-5566</h5>
-            <br />
-            <span>
-                <img src="~/images/Home-iconred.png" />
-            </span>
-            <h5>Av. Juscelino Kubichek 1000 - 03540-550 - São Paulo</h5>
-        </p>
-        <p></p>
+        <br />
 
-        <div>
-            <input type="text" id="nome" placeholder="Nome Completo" />
-            <input type="text" id="telefone" placeholder="(XX) 00000-0000" />
-            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" />
-            <button onclick="EnviarEmail()">Click</button>
+        <div class="contato-container">
+            <form>
+                <label for="fname">Nome Completo</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome...">
+
+                <label for="lname">CPF</label>
+                <input type="number" id="cpf" name="cpf" placeholder="000.000.000-00">
+
+                <label for="lname">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="+00 (00)000000-0000">
+
+                <label for="subject">Assunto</label>
+                <textarea id="assunto" name="assunto" placeholder="Escreva algo aqui..." style="height:200px"></textarea>
+
+                <button onclick="EnviarEmail()">Enviar</button>
+            </form>
         </div>
+
     </div>
 </div>
 
@@ -40,8 +82,9 @@
     function EnviarEmail() {
         var nome = document.getElementById("nome").value;
         var telefone = document.getElementById("telefone").value;
-        var cpf  = $('#cpf').val();
+        var cpf = $('#cpf').val();
+        var assunto = $('#assunto').val();
 
-        window.location.href = "mailto:credito.3292@sicoob-ba.com.br?cc=ti%40credexecutivo.com.br&subject=Atualização Cadastral&body=Olá, tudo bem ? Segue abaixo meus dados cadastrais atualizados: %0D%0A %0D%0A Nome: " + nome + " %0D%0A Cpf: " + cpf + "%0D%0A Numero de telefone: " + telefone + "%0D%0A %0D%0A Por favor anexe seus comprovantes Comprovante nesse e-mail: %0D%0A Comprovante de residencia: %0D%0A Comprovante de renda: %0D%0A %0D%0A Atenciosamente, ";
+        window.location.href = "mailto:jvmpr.dev@gmail.com?subject=Contato via pagina WEB&body=Olá, tudo bem ? Segue abaixo meus dados: %0D%0A %0D%0A Nome: " + nome + " %0D%0A Cpf: " + cpf + "%0D%0A Numero de telefone: " + telefone + "%0D%0A Assunto: " + assunto + "%0D%0A %0D%0A Atenciosamente, ";
     }
 </script>

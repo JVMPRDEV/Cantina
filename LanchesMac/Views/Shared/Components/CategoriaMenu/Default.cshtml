@@ -1,7 +1,10 @@
-﻿
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+</head>
+
 <div class="dropdown">
 
-    <a style="background: orange" class="btn btn-secondary dropdown-toggle" role="button" 
+    <a class="btn btn-secondary dropdown-toggle header-dropdown" role="button" 
         id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
      Lanches
   </a>
@@ -17,7 +20,7 @@
          <li class="dropdown-divider"></li>
              <li>
             <a class="dropdown-item" asp-controller="Lanche" asp-action="List" asp-route-categoria="" 
-               style="color:black">Todos os Lanches</a>
+               style="color:black">Todos os Sabores</a>
         </li>
      </ul>
 

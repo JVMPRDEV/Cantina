@@ -1,0 +1,38 @@
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+@model Lanche
+
+<div class="vertical-menu-container">
+    <!--Imagem-->
+    <div class="vertical-menu-image row">
+        <p>
+            <a asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">
+                <img src="@Model.ImagemUrl" class="img-fluid" asp-append-version="true">
+            </a>
+        </p>
+    </div>
+
+    <div class="vertical-menu-item row">
+        <!--Titulo-->
+        <div>
+            <h3 class="vertical-menu-nome">
+                <a asp-controller="Lanche" asp-action="Details"
+                   asp-route-lancheId="@Model.LancheId"><b>@Model.Nome</b></a>
+            </h3>
+        </div>
+
+        <!--Descrição -->
+        <div>
+            <p class="vertical-menu-descricao">@Model.DescricaoCurta</p>
+        </div>
+
+        <!--Preço-->
+        <div>
+            <h4 class="vertical-menu-preco"><b>Preço : </b>@Model.Preco.ToString("c")</h4>
+        </div>
+    </div>
+</div>
+

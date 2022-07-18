@@ -28,8 +28,8 @@
                         <div class="navbar-collapse collapse flex-end" id="collapsibleNavbar">
                             <div>
                                 <form class="navbar-form navbar-right" asp-controller="Lanche" asp-action="Search" method="get">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Procurar produto" name="searchString" value="@ViewData["searchString"]">
+                                    <div class="form-group" style=" font-family: Palatino, URW Palladio L, serif;">
+                                        <input type="text" class="form-control" placeholder="Procurar produto..." name="searchString" value="@ViewData["searchString"]">
                                     </div>
                                 </form>
                             </div>
@@ -46,7 +46,7 @@
             <section class="header-container  space-between">
                 <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a></div>
                 <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Contato" asp-action="Index">Contato</a></div>
-                <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Sobre nós</a></div>
+                <div class="item"><a class="nav-link text-light" asp-action="List" asp-controller="Lanche">Cardápio</a></div>
                 <div class="item"><a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Meus Pedidos</a></div>
                 <div class="item">
                     @if (User.IsInRole("Admin"))
