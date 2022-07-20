@@ -1,14 +1,20 @@
-﻿@model LancheListViewModel
-
-<div>
-    <h2>@Model.CategoriaAtual</h2>
-</div>
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+    @model LancheListViewModel
+</head>
 
 <div class="container">
-    <div class="row">
-        @foreach (var lanche in Model.Lanches)
-        {
-          <partial name="_LanchesResumo" for="@lanche"/>
-        }
-    </div>
+    <section id="lanches-favoritos">
+        <div class="lanches-favoritos-container">
+            <br />
+            <h2 class="lanches-favoritos-titulo">@Model.CategoriaAtual</h2>
+
+            <div class="row space-around">
+                @foreach (var lanche in Model.Lanches)
+                {
+                    <partial name="_LanchesResumo" for="@lanche" />
+                }
+            </div>
+        </div>
+    </section>
 </div>

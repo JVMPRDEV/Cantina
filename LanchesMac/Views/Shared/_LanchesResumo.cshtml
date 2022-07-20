@@ -1,13 +1,12 @@
 ﻿<head>
     <link href="~/css/site.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    @model Lanche
 </head>
-
-@model Lanche
 
 <div class="card row">
     <div class="card-img">
-        <a class="portfolio-box" asp-action="List" asp-controller="Lanche">
+        <a class="portfolio-box" asp-controller="Lanche" asp-action="Details" asp-route-lancheId="@Model.LancheId">
             <p><img src="@Model.ImagemUrl" class="img-fluid" asp-append-version="true"></p>
         </a>
     </div>
