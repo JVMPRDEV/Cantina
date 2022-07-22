@@ -84,11 +84,11 @@ body {
     width: 100vw;
     padding-left: 10vw;
     padding-right: 10vw;
-    background: var(--color-branco);
+    background: var(--color-nude);
 }
 
 .header-nav-2 {
-    background: var(--color-branco);
+    background: var(--color-nude);
 }
 
 .header-nav-3 {

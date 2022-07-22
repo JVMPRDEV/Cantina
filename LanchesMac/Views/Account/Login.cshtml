@@ -1,38 +1,97 @@
-﻿ @model LoginViewModel
+﻿<head>
+    <link href="~/css/site.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    @model LoginViewModel
 
-<table class="table">
-    <tr>
-        <td><img src="~/images/login1.jpg" class="img-fluid" asp-append-version="true"  alt="Fazer o Login" /></td>
-        <td>
-            <div class="row">
-                <div class="col-9 col-md-9 col-lg-9">
-                    <h4>Login</h4>
-                    <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal" role="form">
-                        <hr />
-                        <div asp-validation-summary="All" class="text-danger"></div>
-                        <input type="hidden" asp-for="ReturnUrl" />
-                        <div class="form-group">
-                            <label asp-for="UserName" class="col-md-2 control-label"></label>
-                            <div class="col-md-6">
-                                <input asp-for="UserName" class="form-control" />
-                                <span asp-validation-for="UserName" class="text-danger"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Password" class="col-md-2 control-label"></label>
-                            <div class="col-md-6">
-                                <input asp-for="Password" class="form-control" />
-                                <span asp-validation-for="Password" class="text-danger"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-8">
-                                <input type="submit" class="btn btn-success" value="Log in" />
-                            </div>
-                        </div>
-                    </form>
+    <style>
+        input,
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            margin: 5px 0;
+            opacity: 0.85;
+            display: inline-block;
+            font-size: 17px;
+            line-height: 20px;
+            text-decoration: none; /* remove underline from anchors */
+        }
+
+            input:hover,
+            .btn:hover {
+                opacity: 1;
+            }
+
+           input[type=submit] {
+               background-color: #04AA6D;
+               color: white;
+               cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+
+<div style="   width: 90vw;margin-top: 1vh;margin-bottom: 2vh;padding-top:15px; font-family: Palatino, URW Palladio L, serif;">
+    <div class="login-row ">
+
+        <h2 style="text-align:center;  font-family: Palatino, URW Palladio L, serif;">Entre no site por aqui</h2>
+
+        <div class="login-col" style="min-height: 220px;padding-top:15px;padding-left: 15vw;height: auto;border-right: 2px solid #ddd;">
+
+
+            <a href="#" class="fb btn">
+                <i class="fa fa-facebook fa-fw"></i> Login wth Facebook
+            </a>
+
+            <a href="#" class="twitter btn">
+                <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+            </a>
+
+            <a href="#" class="google btn">
+                <i class="fa fa-google fa-fw">
+                </i> Login with Google+
+            </a>
+
+        </div>
+
+        <div class="login-col" style="min-height: 220px;padding-right: 15vw;">
+            <!--formulario de login-->
+            <form asp-controller="Account" asp-action="Login" method="post" class="form-horizontal" role="form">
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <input type="hidden" asp-for="ReturnUrl" />
+
+                <div class="form-group">
+
+                    <div >
+                        <input asp-for="UserName" placeholder="Username"/>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
                 </div>
-            </div>
-        </td>
-    </tr>
-</table>
+
+                <div class="form-group">
+
+                    <div>
+                        <input asp-for="Password" type="password" name="password" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div>
+                        <input type="submit" value="Log in" />
+                    </div>
+                </div>
+
+            </form>
+            <!--Fim do formulario de login-->
+
+        </div>
+
+    </div>
+</div>
+
